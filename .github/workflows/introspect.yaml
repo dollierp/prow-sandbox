@@ -1,0 +1,24 @@
+---
+name: Introspect
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  introspect:
+    name: Introspect GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v6
+
+      - name: Introspection
+        run: ci/introspect.sh
+
+# vi: set ft=yaml et sw=2 ts=2:
