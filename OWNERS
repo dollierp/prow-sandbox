@@ -1,0 +1,9 @@
+# See documentation
+# - https://docs.prow.k8s.io/docs/components/plugins/approve/approvers/
+
+approvers: &approvers
+  - dollierp
+
+reviewers: *approvers
+
+# vi: set ft=yaml noet sw=2 ts=2:
