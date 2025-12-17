@@ -1,0 +1,11 @@
+# See documentation:
+# - https://github.com/koalaman/shellcheck/wiki/Directive#shellcheckrc-file
+
+enable=deprecate-which
+enable=quote-safe-variables
+enable=require-variable-braces
+enable=useless-use-of-cat
+
+external-sources=true
+
+# vi: set ft=cfg:
