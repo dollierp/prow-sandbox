@@ -1,0 +1,16 @@
+---
+# See documentation:
+# - https://yamllint.readthedocs.io/en/stable/configuration.html
+
+extends: default
+
+ignore: |
+  /manifests/
+
+locale: C.utf8
+
+rules:
+  line-length:
+    allow-non-breakable-words: true
+
+# vi: set ft=yaml et sw=2 ts=2:
