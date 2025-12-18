@@ -1,0 +1,21 @@
+---
+# See documentation:
+# - https://pkg.go.dev/sigs.k8s.io/prow/cmd/generic-autobumper/bumper#Options
+# - https://sigs.k8s.io/prow/cmd/generic-autobumper/main.go#options
+
+githubOrg: dollierp
+githubRepo: prow-sandbox
+githubToken: /run/secrets/github-token
+headBranchName: autobump
+includedConfigPaths:
+  - ./manifests
+prefixes:
+  - name: Prow
+    prefix: us-docker.pkg.dev/k8s-infra-prow/images
+    #refConfigFile: config/prow/cluster/starter/starter-gcs.yaml
+remoteName: prow-sandbox
+skipPullRequest: true
+targetVersion: latest
+#upstreamURLBase: https://github.com/kubernetes-sigs/prow/raw/main
+
+# vi: set ft=yaml et sw=2 ts=2:
