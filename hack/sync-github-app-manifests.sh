@@ -9,7 +9,7 @@ mkdir -p "${MANIFESTS_DIR}"
 
 cd "${MANIFESTS_DIR}"
 
-curl -gSL --fail-with-body 'https://github.com/kubernetes/test-infra/raw/master/config/prow/cluster/starter/starter-gcs.yaml' \
+curl -gSL --fail-with-body 'https://github.com/kubernetes-sigs/prow/raw/main/config/prow/cluster/starter/starter-gcs.yaml' \
 | csplit - '/^---$/' '{*}' \
     --prefix='' \
     --suffix-format='%02d-prow-manifest.yaml' \
