@@ -5,6 +5,9 @@ sys_info()
     id
 
     uptime
+    free -h
+    lscpu
+
     cat /etc/os-release
     cat /proc/cmdline
 
