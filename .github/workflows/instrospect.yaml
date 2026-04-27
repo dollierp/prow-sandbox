@@ -1,0 +1,28 @@
+---
+# See documentation:
+# - https://docs.github.com/actions/reference/workflows-and-actions
+
+name: Introspect
+
+on:
+  pull_request:
+    branches: [ $default-branch ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  introspect:
+    name: Introspect GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git repository
+        id: Checkout
+        uses: actions/checkout@main
+
+      - name: Introspection
+        id: introspect
+        run: ci/introspect.sh
+
+# vi: set ft=yaml et sw=2 ts=2:
