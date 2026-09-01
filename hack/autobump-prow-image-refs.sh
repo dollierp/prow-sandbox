@@ -12,7 +12,7 @@
 SELF_DIR=$(dirname "$(readlink -f "$0")")
 TOP_DIR=${SELF_DIR%/*}
 
-cd "${TOP_DIR}"
+cd ${TOP_DIR}
 
 if [ ! "${GIT_COMMITTER_NAME-}" ]; then
     GITHUB_WHOAMI=$(

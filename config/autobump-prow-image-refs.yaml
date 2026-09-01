@@ -12,10 +12,10 @@ includedConfigPaths:
 prefixes:
   - name: Prow
     prefix: us-docker.pkg.dev/k8s-infra-prow/images/
-    # refConfigFile: config/prow/cluster/starter/starter-gcs.yaml
+    #refConfigFile: config/prow/cluster/starter/starter-gcs.yaml
 remoteName: prow-sandbox
 skipPullRequest: true
 targetVersion: latest
-# upstreamURLBase: https://github.com/kubernetes-sigs/prow/raw/main
+#upstreamURLBase: https://github.com/kubernetes-sigs/prow/raw/main
 
 # vi: set ft=yaml et sw=2 ts=2:
